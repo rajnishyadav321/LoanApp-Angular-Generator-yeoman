@@ -1,0 +1,106 @@
+<h4>About the Applicant</h4>
+<div ng-controller="LoanformCtrl" style="margin-top: 50px;">
+<form class="form-horizontal" ng-submit="saveLoanDetails(form.$valid)" novalidate name="form">
+	<div class="container-fluid">
+	<fieldset class="scheduler-border">
+    <legend class="scheduler-border">Applicant Details</legend>
+ 		<div class="container">
+ 		<!-- 	<form > -->
+ <div class="form-group">
+  <label class="control-label col-sm-4" for="purposeofloan">Purpose Of loan ?</label>
+  <div class="col-sm-8">
+  	 <select class="form-control" name="purposeOfLoan" ng-model="loanDetail.purposeOfLoan" id="purposeofloan" required>
+  	 <option selected disabled>Purpose of loan</option>
+    <option>Home</option>
+    <option>School</option>
+    <option>Business</option>
+    <option>Education</option>
+  </select>
+  </div>
+ 
+</div>
+ <div class="form-group">
+    <label  class="control-label col-sm-4" for="loanAmount">Total Loan Amount Required</label>
+    <div class="col-sm-4">
+      <input  type="text" class="form-control" id="loanAmount" placeholder="Enter loan amount" name="loanAmount" ng-model="loanDetail.loanAmount" required>
+      <input type="range" min="1000" max="100000" value="1000" ng-model="loanDetail.loanAmount">
+    </div>
+
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-4" for="address">Permanent Address</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="address" placeholder="Enter Permanent Address" name="permanentAddress" ng-model="loanDetail.permanentAddress" required>
+    </div>
+    <div class="col-sm-4">
+      <select  ng-model="loanDetail.state" class="form-control" id="state" data-ng-options="state1.name for state1 in states track by state1.name" data-ng-change="updateState()" name="state" required>
+       <option disabled selected value="">Select State</option> 
+  </select>
+    </div>
+    <div class="col-sm-offset-4 col-sm-4 lpaddress">
+       <select ng-model="loanDetail.city" class="form-control" id="city" data-ng-options="city1.name for city1 in availableCities track by city1.name" name="city" required>
+  	 <option disabled selected value="">Select City</option>
+  </select>
+    </div>
+    <div class="col-sm-4 lpaddress">
+      <input type="text" class="form-control" id="pinCode" placeholder="PIN Code" name="pinCode" ng-model="loanDetail.pinCode" required>
+    </div>
+  </div>
+
+     <div class="form-group">
+    <label class="control-label col-sm-4" for="tenureOfLoan">Tenure of Loan</label>
+     <div class="col-sm-4">
+      <select class="form-control" id="years" name="years" ng-model="loanDetail.years" required>
+  	 <option selected disabled>Years</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+    </div>
+    <div class="col-sm-4">
+      <select class="form-control" id="months" name="months" ng-model="loanDetail.months" required>
+  	 <option selected disabled>Months</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+    </div>
+  </div>
+
+<div class="form-group">
+    <label  class="control-label col-sm-4" for="residenceType">Residence Type</label>
+    <div class="col-sm-4">
+      <label class="radio-inline">
+      <input type="radio" name="residenceType" ng-model="loanDetail.residenceType" value="House" selected>House
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="residenceType" ng-model="loanDetail.residenceType" value="Apartment">Apartment 
+    </label>
+  
+    </div>
+
+  </div>
+ 
+<!--   <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div> -->
+<!-- </form> -->
+ 	</div>
+</fieldset>
+</div>
+<button type="submit"  class="btn btn-primary pull-right" style="margin-right:30px;">Continue</button> 
+</form>
+ 
+</div>
+
+
+
+
+
+
+
+

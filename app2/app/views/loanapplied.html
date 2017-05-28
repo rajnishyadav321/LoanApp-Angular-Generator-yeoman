@@ -1,0 +1,72 @@
+
+<div ng-controller="LoanappliedCtrl">
+  <div class="container-fluid">
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Applicant Details</legend>
+      
+      <div class="row" style="padding: 30px;">
+        
+        <div class="col-sm-11">
+          <div class="row detailRow">
+            <div class="col-sm-6">
+              <div class="col-sm-5 name">
+                Purpose of Loan:
+              </div>
+              <div class="col-sm-4">
+                 {{loanDetail.purposeOfLoan}} Loan
+              </div>
+            </div>
+            <div class="col-sm-6">
+             <div class="col-sm-4 name">
+                Total Loan Amount:
+              </div>
+              <div class="col-sm-4">
+                 {{loanDetail.loanAmount}}
+              </div>
+            </div>
+          </div>
+            <div class="row detailRow">
+            <div class="col-sm-6">
+              <div class="col-sm-5 name">
+                Tenure of Loan:
+              </div>
+              <div class="col-sm-4">
+                 {{loanDetail.years}} year {{loanDetail.months}} months
+              </div>
+            </div>
+            <div class="col-sm-6">
+             <div class="col-sm-4 name">
+                Residence Type:
+              </div>
+              <div class="col-sm-4">
+                 {{loanDetail.residenceType}}
+              </div>
+            </div>
+          </div>
+            <div class="row detailRow">
+            <div class="col-sm-6">
+              <div class="col-sm-5 name">
+                Permanent Address:
+              </div>
+              <div class="col-sm-4">
+                 <div>{{loanDetail.permanentAddress}}</div>
+                   <div>{{loanDetail.city}}</div>
+                    <div>{{loanDetail.state}}</div>
+                     <div>{{loanDetail.pinCode}}</div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <button class="btn btn-success">Edit</button>
+        </div>
+      </div>
+       
+</fieldset>
+</div> 
+</div>
+
+
+  
+    
