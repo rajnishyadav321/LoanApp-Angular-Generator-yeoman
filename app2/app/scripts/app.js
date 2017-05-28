@@ -40,20 +40,10 @@ angular
         controller: 'LoanformCtrl',
         controllerAs: 'loanform'
       })
-      .when('/forgotpassword', {
-        templateUrl: 'views/forgotpassword.html',
-        controller: 'ForgotpasswordCtrl',
-        controllerAs: 'forgotpassword'
-      })
       .when('/loanapplied', {
         templateUrl: 'views/loanapplied.html',
         controller: 'LoanappliedCtrl',
         controllerAs: 'loanapplied'
-      })
-      .when('/testing', {
-        templateUrl: 'views/testing.html',
-        controller: 'TestingCtrl',
-        controllerAs: 'testing'
       })
       .otherwise({
         redirectTo: '/'
